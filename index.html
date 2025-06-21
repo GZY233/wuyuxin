@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴雨欣</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+
+        }
+
+        .font {
+         
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media(max-width:399px) {
+            .font {
+                font-size: 20px;
+                min-height: 28px;
+                margin-bottom: 20px;
+            }
+
+
+        }
+
+        @media(min-width:400px) and (max-width:599px) {
+            .font {
+                font-size: 24px;
+                min-height: 28px;
+                margin-bottom: 33.5px;
+                
+            }
+
+
+        }
+
+        @media(min-width:600px) {
+            .font {
+                font-size: 32px;
+                min-height: 32px;
+                margin-bottom: 45px;
+                
+            }
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="font"></div>
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+
+
+
+        var app = document.querySelector('.font');
+        console.log(app);
+
+        var typewriter = new Typewriter(app, {
+            loop: true,
+            delay: 75,
+        });
+        typewriter
+            .pauseFor(500)
+            .typeString('早上、下午、晚上好，吴雨欣😀')
+            .pauseFor(300)
+            .deleteChars(15)
+            .typeString('<strong>当然！</strong>聪明可爱的吴老师一定会</br>')
+            .typeString('<strong> <div style="color: red;">长命百岁</div> &nbsp&nbsp&nbsp&nbsp <span style="color: rgb(122, 255, 211);">万事顺遂</span></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color: rgb(116, 134, 255);">诸邪辟退</span></strong>')
+            .pauseFor(500)
+            .start();
+
+    </script>
+</body>
+
+</html>
